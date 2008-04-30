@@ -1,0 +1,30 @@
+ORIG_PN="apr-util"
+
+DESCRIPTION="Apache Portable Runtime utility library"
+HOMEPAGE="http://apr.apache.org/"
+SRC_URI="mirror://apache/apr/${ORIG_PN}-${PV}.tar.bz2"
+
+PKG_NAMES="${PN} lib${PN} lib${PN}-devel"
+PKG_HINTS="setup lib devel"
+PKG_CONTENTS[0]="usr/share/doc/"
+PKG_CONTENTS[1]="usr/bin/*.dll"
+PKG_CONTENTS[2]="usr/bin/*-config usr/include/ usr/lib/"
+
+CYGCONF_ARGS="
+	--with-apr=/usr
+	--with-berkeley-db=/usr
+	--with-dbm=db46
+	--with-expat=/usr
+	--with-gdbm=/usr
+	--with-mysql=/usr
+	--with-pgsql=/usr
+	--with-sqlite2=/usr
+	--with-sqlite3=/usr
+"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	rm -f ${D}/usr/lib/aprutil.exp
+}

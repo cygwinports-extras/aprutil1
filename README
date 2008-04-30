@@ -1,0 +1,111 @@
+aprutil1
+------------------------------------------
+The mission of the Apache Portable Runtime (APR) project is to create 
+and maintain software libraries that provide a predictable and 
+consistent interface to underlying platform-specific implementations. 
+The primary goal is to provide an API to which software developers may 
+code and be assured of predictable if not identical behaviour regardless 
+of the platform on which their software is built, relieving them of the 
+need to code special-case conditions to work around or take advantage of 
+platform-specific deficiencies or features.
+
+Runtime requirements:
+  cygwin-1.5.25-11
+  crypt-1.1-1
+  libapr1-1.2.12-1
+  libdb4.6-4.6.21.1-1
+  libexpat0-1.95.8-2
+  libgdbm4-1.8.3-8
+  libiconv2-1.11-1
+  libmysqlclient15-5.0.51-1
+  libpq4-8.0.7-1
+  libsqlite0-2.8.17-3
+  libsqlite3_0-3.5.6-1
+
+Build requirements:
+(besides corresponding devel packages)
+  autoconf2.5-2.61-1
+  automake1.10-1.10.1-1
+  binutils-20060817-1
+  cygport-0.3.9-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://apr.apache.org/
+
+Canonical download:
+  http://archive.apache.org/dist/apr/
+
+-------------------------------------------
+
+Build instructions:
+  unpack aprutil1-1.2.12-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./aprutil1-1.2.12-X.cygport all
+
+This will create:
+  /usr/src/aprutil1-1.2.12-X-src.tar.bz2
+  /usr/src/aprutil1-1.2.12-X.tar.bz2
+  /usr/src/libaprutil1-1.2.12-X.tar.bz2
+  /usr/src/libaprutil1-devel-1.2.12-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(aprutil1)
+  /usr/share/doc/aprutil1-1.2.12/Changes
+  /usr/share/doc/aprutil1-1.2.12/LICENSE
+
+(libaprutil1)
+  /usr/bin/cygaprutil-1-0.dll
+
+(libaprutil1-devel)
+  /usr/bin/apu-1-config
+  /usr/include/apr-1/apr_anylock.h
+  /usr/include/apr-1/apr_base64.h
+  /usr/include/apr-1/apr_buckets.h
+  /usr/include/apr-1/apr_date.h
+  /usr/include/apr-1/apr_dbd.h
+  /usr/include/apr-1/apr_dbm.h
+  /usr/include/apr-1/apr_hooks.h
+  /usr/include/apr-1/apr_ldap.h
+  /usr/include/apr-1/apr_ldap_init.h
+  /usr/include/apr-1/apr_ldap_option.h
+  /usr/include/apr-1/apr_ldap_url.h
+  /usr/include/apr-1/apr_md4.h
+  /usr/include/apr-1/apr_md5.h
+  /usr/include/apr-1/apr_optional.h
+  /usr/include/apr-1/apr_optional_hooks.h
+  /usr/include/apr-1/apr_queue.h
+  /usr/include/apr-1/apr_reslist.h
+  /usr/include/apr-1/apr_rmm.h
+  /usr/include/apr-1/apr_sdbm.h
+  /usr/include/apr-1/apr_sha1.h
+  /usr/include/apr-1/apr_strmatch.h
+  /usr/include/apr-1/apr_uri.h
+  /usr/include/apr-1/apr_uuid.h
+  /usr/include/apr-1/apr_xlate.h
+  /usr/include/apr-1/apr_xml.h
+  /usr/include/apr-1/apu.h
+  /usr/include/apr-1/apu_version.h
+  /usr/include/apr-1/apu_want.h
+  /usr/lib/libaprutil-1.dll.a
+  /usr/lib/libaprutil-1.la
+  /usr/lib/pkgconfig/apr-util-1.pc
+
+------------------
+
+Port Notes:
+
+----- version 1.2.12-1 -----
+Version bump.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
