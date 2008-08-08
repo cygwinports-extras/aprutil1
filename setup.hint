@@ -1,6 +1,6 @@
-category: Libs
+category: _obsolete
 requires: libaprutil1-devel
-sdesc: "Apache Portable Runtime utility library (docs)"
+sdesc: "Apache Portable Runtime utility library (source)"
 ldesc: "The mission of the Apache Portable Runtime (APR) project is to 
 create and maintain software libraries that provide a predictable and 
 consistent interface to underlying platform-specific implementations. 

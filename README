@@ -10,24 +10,25 @@ need to code special-case conditions to work around or take advantage of
 platform-specific deficiencies or features.
 
 Runtime requirements:
-  cygwin-1.5.25-11
+  cygwin-1.5.25-15
   crypt-1.1-1
-  libapr1-1.2.12-1
+  libapr1-1.3.2-1
   libdb4.6-4.6.21.1-1
-  libexpat0-1.95.8-2
+  libexpat1-2.0.1-1
   libgdbm4-1.8.3-8
   libiconv2-1.11-1
   libmysqlclient15-5.0.51-1
-  libpq4-8.0.7-1
+  libopenldap2_3_0-2.3.39-1
+  libpq5-8.2.9-1
   libsqlite0-2.8.17-3
-  libsqlite3_0-3.5.6-1
+  libsqlite3_0-3.5.9-1
 
 Build requirements:
 (besides corresponding devel packages)
   autoconf2.5-2.61-1
   automake1.10-1.10.1-1
-  binutils-20060817-1
-  cygport-0.3.9-1
+  binutils-20080523-2
+  cygport-0.3.12-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   make-3.81-1
@@ -42,28 +43,37 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack aprutil1-1.2.12-X-src.tar.bz2
+  unpack aprutil1-1.3.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./aprutil1-1.2.12-X.cygport all
+  cygport ./aprutil1-1.3.2-X.cygport all
 
 This will create:
-  /usr/src/aprutil1-1.2.12-X-src.tar.bz2
-  /usr/src/aprutil1-1.2.12-X.tar.bz2
-  /usr/src/libaprutil1-1.2.12-X.tar.bz2
-  /usr/src/libaprutil1-devel-1.2.12-X.tar.bz2
+  /usr/src/aprutil1-1.3.2-X-src.tar.bz2
+  /usr/src/aprutil1-1.3.2-X.tar.bz2
+  /usr/src/libaprutil1-1.3.2-X.tar.bz2
+  /usr/src/libaprutil1-devel-1.3.2-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
-(aprutil1)
-  /usr/share/doc/aprutil1-1.2.12/Changes
-  /usr/share/doc/aprutil1-1.2.12/LICENSE
-
 (libaprutil1)
   /usr/bin/cygaprutil-1-0.dll
+  /usr/lib/apr-util-1/apr_dbd_mysql-1.dll
+  /usr/lib/apr-util-1/apr_dbd_mysql.la
+  /usr/lib/apr-util-1/apr_dbd_pgsql-1.dll
+  /usr/lib/apr-util-1/apr_dbd_pgsql.la
+  /usr/lib/apr-util-1/apr_dbd_sqlite2-1.dll
+  /usr/lib/apr-util-1/apr_dbd_sqlite2.la
+  /usr/lib/apr-util-1/apr_dbd_sqlite3-1.dll
+  /usr/lib/apr-util-1/apr_dbd_sqlite3.la
+  /usr/lib/apr-util-1/apr_ldap-1.dll
+  /usr/lib/apr-util-1/apr_ldap.la
+  /usr/share/doc/aprutil1-1.3.2/Changes
+  /usr/share/doc/aprutil1-1.3.2/LICENSE
+  /usr/share/doc/aprutil1-1.3.2/README
 
 (libaprutil1-devel)
   /usr/bin/apu-1-config
@@ -77,9 +87,11 @@ Files included in the binary packages:
   /usr/include/apr-1/apr_ldap.h
   /usr/include/apr-1/apr_ldap_init.h
   /usr/include/apr-1/apr_ldap_option.h
+  /usr/include/apr-1/apr_ldap_rebind.h
   /usr/include/apr-1/apr_ldap_url.h
   /usr/include/apr-1/apr_md4.h
   /usr/include/apr-1/apr_md5.h
+  /usr/include/apr-1/apr_memcache.h
   /usr/include/apr-1/apr_optional.h
   /usr/include/apr-1/apr_optional_hooks.h
   /usr/include/apr-1/apr_queue.h
@@ -88,6 +100,7 @@ Files included in the binary packages:
   /usr/include/apr-1/apr_sdbm.h
   /usr/include/apr-1/apr_sha1.h
   /usr/include/apr-1/apr_strmatch.h
+  /usr/include/apr-1/apr_thread_pool.h
   /usr/include/apr-1/apr_uri.h
   /usr/include/apr-1/apr_uuid.h
   /usr/include/apr-1/apr_xlate.h
@@ -102,6 +115,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.3.2-1 -----
+Version bump.
 
 ----- version 1.2.12-1 -----
 Version bump.
