@@ -1,5 +1,5 @@
 category: Libs
-requires: cygwin libaprutil1 crypt libapr1-devel libdb4.6-devel libexpat-devel libgdbm-devel libiconv
+requires: libaprutil1 crypt libapr1-devel libdb4.6-devel libexpat-devel libgdbm-devel libiconv
 external-source: aprutil1
 sdesc: "Apache Portable Runtime utility library (libdevel)"
 ldesc: "The mission of the Apache Portable Runtime (APR) project is to 
